@@ -1,0 +1,77 @@
+# Build output
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+*.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+*.env
+*.yml
+
+# Test output
+test-output/
+surefire-reports/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+.mvn/wrapper/maven-wrapper.properties
+src/main/resources/application.properties
+docs/assignment/microservice-1.en.md
+docs/assignment/microservice-2.en.md
+docs/implementation/COMPLIANCE_AND_IMPLEMENTATION_REPORT.md
+docs/implementation/frontend-implementation-plan.md
+docs/implementation/implementation-guide.md
+docs/source/Enunciado Prueba de Desempeño - M 6.1 Java + Spring Boot.pdf
+docs/source/Guía Prueba de Desempeño - M6.1 Java + Spring Boot.pdf
+docs/source/microservice-1.md
+docs/source/microservice-2.md
+docs/stuff/CoopCredit Multi-Module Project.md
+docs/stuff/requirements.txt
+docs/stuff/walkthrough.md
