@@ -118,6 +118,13 @@ cd credit-application-service
 mvn spring-boot:run
 ```
 
+4. **Start Frontend:**
+```bash
+cd coopcredit-frontend
+npm install
+npm run dev
+```
+
 ## 📡 API Documentation
 
 ### Authentication Endpoints
