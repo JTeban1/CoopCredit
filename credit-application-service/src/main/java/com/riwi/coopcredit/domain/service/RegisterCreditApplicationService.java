@@ -44,7 +44,8 @@ public class RegisterCreditApplicationService implements RegisterCreditApplicati
                 "Affiliate is not active and cannot apply for credit");
         }
 
-        validateSeniority(affiliate.getAffiliationDate());
+        // Seniority validation removed - allow new affiliates to apply
+        // validateSeniority(affiliate.getAffiliationDate());
         validateCreditAmount(creditApplication.getRequestedAmount(), affiliate);
         validateInstallmentRatio(creditApplication, affiliate.getSalary());
         validateTermMonths(creditApplication.getTermMonths());
