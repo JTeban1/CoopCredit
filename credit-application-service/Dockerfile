@@ -1,8 +1,16 @@
 # Build stage
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY pom.xml .
-COPY src ./src
+
+# Copy and install parent POM first
+COPY pom.xml ./parent-pom.xml
+RUN mvn install:install-file -Dfile=parent-pom.xml -DgroupId=com.riwi -DartifactId=coopcredit-parent -Dversion=1.0.0 -Dpackaging=pom
+
+# Copy microservice files
+COPY credit-application-service/pom.xml ./pom.xml
+COPY credit-application-service/src ./src
+
+# Build the application
 RUN mvn clean package -DskipTests
 
 # Runtime stage
