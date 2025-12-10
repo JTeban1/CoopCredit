@@ -51,7 +51,7 @@ logs/
 .env
 .env.local
 *.env
-*.yml
+
 
 # Test output
 test-output/
@@ -88,3 +88,8 @@ coopcredit-simple-frontend/js/affiliates.js
 coopcredit-simple-frontend/js/api.js
 coopcredit-simple-frontend/js/applications.js
 coopcredit-simple-frontend/js/auth.js
+prometheus/prometheus.yml
+risk-central-mock-service/src/main/resources/application.yml
+credit-application-service/src/main/resources/application.yml
+credit-application-service/src/main/resources/application-prod.yml
+credit-application-service/src/main/resources/application-dev.yml
