@@ -75,3 +75,16 @@ docs/source/microservice-2.md
 docs/stuff/CoopCredit Multi-Module Project.md
 docs/stuff/requirements.txt
 docs/stuff/walkthrough.md
+docker-compose.yml.backup
+docs/stuff/docs-prompt.md
+coopcredit-frontend/.env.production
+coopcredit-frontend/.env.development
+coopcredit-simple-frontend/affiliates.html
+coopcredit-simple-frontend/applications.html
+coopcredit-simple-frontend/dashboard.html
+coopcredit-simple-frontend/index.html
+coopcredit-simple-frontend/css/styles.css
+coopcredit-simple-frontend/js/affiliates.js
+coopcredit-simple-frontend/js/api.js
+coopcredit-simple-frontend/js/applications.js
+coopcredit-simple-frontend/js/auth.js
