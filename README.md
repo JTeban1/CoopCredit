@@ -35,12 +35,36 @@ credit-application-service/
     └── exception/    # Error handling
 ```
 
+
+## Frontend Architecture
+
+The frontend is built using **React** with **TypeScript** and **Vite**. Key libraries include:
+
+- **TailwindCSS**: For utility-first styling.
+- **React Hook Form** & **Zod**: For robust form handling and validation.
+- **React Router**: For client-side routing.
+- **Axios**: For API integration with the backend services.
+- **Lucide React**: For modern iconography.
+
+```
+coopcredit-frontend/
+├── src/
+│   ├── api/          # Axios client and API calls
+│   ├── components/   # Reusable UI components
+│   ├── contexts/     # React Context (Auth, etc.)
+│   ├── pages/        # Page components
+│   ├── types/        # TypeScript interfaces
+│   └── utils/        # Helpers and validators
+└── public/           # Static assets
+```
+
 ## 📦 Modules
 
 | Module | Description | Port |
 |--------|-------------|------|
 | `credit-application-service` | Main microservice for credit management | 8080 |
 | `risk-central-mock-service` | Mock external risk evaluation service | 8081 |
+| `coopcredit-frontend` | React Frontend Application | 80 (Docker) / 5173 (Dev) |
 
 ## ⚙️ Prerequisites
 
@@ -201,6 +225,11 @@ docker-compose build credit-application-service
 | `JWT_SECRET` | (required) | JWT signing key (min 64 chars) |
 | `JWT_EXPIRATION_MINUTES` | `1440` | Token expiration time |
 | `RISK_CENTRAL_URL` | `http://localhost:8081` | Risk service URL |
+
+### Frontend Environment Variables
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `VITE_API_BASE_URL` | `http://localhost:8080` | Backend API URL |
 
 ## 📊 Monitoring
 
