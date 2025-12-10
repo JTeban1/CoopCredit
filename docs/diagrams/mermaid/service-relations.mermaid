@@ -1,0 +1,25 @@
+graph TD
+    Client["Client / Browser"]
+    
+    subgraph "Frontend"
+        FE[coopcredit-frontend]
+    end
+    
+    subgraph "Backend Services"
+        CAS[credit-application-service]
+        RCMS[risk-central-mock-service]
+    end
+    
+    subgraph "Infrastructure"
+        DB[("PostgreSQL Database")]
+    end
+    
+    Client -->|"HTTP / User Interaction"| FE
+    FE -->|"HTTP / REST API"| CAS
+    CAS -->|"HTTP / REST API"| RCMS
+    CAS -->|"JDBC / JPA"| DB
+    
+    style FE fill:#f9f,stroke:#333,stroke-width:2px
+    style CAS fill:#bbf,stroke:#333,stroke-width:2px
+    style RCMS fill:#bfb,stroke:#333,stroke-width:2px
+    style DB fill:#ff9,stroke:#333,stroke-width:2px

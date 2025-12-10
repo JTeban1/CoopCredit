@@ -1,0 +1,36 @@
+graph TD
+    subgraph "Infrastructure Layer (Driving Adapters)"
+        Controller[REST Controllers]
+    end
+
+    subgraph "Application Core"
+        subgraph "Incoming Ports"
+            InPorts["Input Ports (Use Cases interfaces)"]
+        end
+        
+        subgraph "Domain Layer"
+            DomainModel["Domain Model / Entities"]
+            DomainServices["Domain Services / Use Case Implementations"]
+        end
+        
+        subgraph "Outgoing Ports"
+            OutPorts["Output Ports (Repository/External interfaces)"]
+        end
+    end
+
+    subgraph "Infrastructure Layer (Driven Adapters)"
+        Persistence["Persistence Adapters (JPA Repositories)"]
+        External["External Service Adapters (Risk Central)"]
+    end
+
+    Controller -->|Uses| InPorts
+    DomainServices -.->|Implements| InPorts
+    DomainServices -->|Uses| DomainModel
+    DomainServices -->|Uses| OutPorts
+    Persistence -.->|Implements| OutPorts
+    External -.->|Implements| OutPorts
+
+    style DomainModel fill:#f9f,stroke:#333,stroke-width:2px
+    style DomainServices fill:#bbf,stroke:#333,stroke-width:2px
+    style InPorts fill:#dfd,stroke:#333,stroke-width:2px
+    style OutPorts fill:#dfd,stroke:#333,stroke-width:2px
