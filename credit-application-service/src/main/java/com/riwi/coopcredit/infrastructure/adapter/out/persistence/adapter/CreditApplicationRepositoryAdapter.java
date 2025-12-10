@@ -39,6 +39,13 @@ public class CreditApplicationRepositoryAdapter implements CreditApplicationRepo
     }
 
     @Override
+    public List<CreditApplication> findAll() {
+        return jpaRepository.findAll().stream()
+            .map(this::toDomain)
+            .collect(Collectors.toList());
+    }
+
+    @Override
     public List<CreditApplication> findByAffiliateId(Long affiliateId) {
         return jpaRepository.findByAffiliateId(affiliateId).stream()
             .map(this::toDomain)

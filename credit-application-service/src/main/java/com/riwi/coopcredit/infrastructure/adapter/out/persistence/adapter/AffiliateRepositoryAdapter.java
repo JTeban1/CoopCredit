@@ -6,7 +6,9 @@ import com.riwi.coopcredit.infrastructure.adapter.out.persistence.entity.Affilia
 import com.riwi.coopcredit.infrastructure.adapter.out.persistence.repository.AffiliateJpaRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class AffiliateRepositoryAdapter implements AffiliateRepositoryPort {
@@ -32,6 +34,13 @@ public class AffiliateRepositoryAdapter implements AffiliateRepositoryPort {
     @Override
     public Optional<Affiliate> findByDocument(String document) {
         return jpaRepository.findByDocument(document).map(this::toDomain);
+    }
+
+    @Override
+    public List<Affiliate> findAll() {
+        return jpaRepository.findAll().stream()
+            .map(this::toDomain)
+            .collect(Collectors.toList());
     }
 
     @Override
