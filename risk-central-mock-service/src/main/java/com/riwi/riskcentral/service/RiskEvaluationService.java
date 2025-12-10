@@ -1,18 +1,18 @@
 package com.riwi.riskcentral.service;
 
-import com.riwi.riskcentral.model.RiskEvaluationRequest;
-import com.riwi.riskcentral.model.RiskEvaluationResponse;
-import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.Random;
+
+import org.springframework.stereotype.Service;
+
+import com.riwi.riskcentral.model.RiskEvaluationRequest;
+import com.riwi.riskcentral.model.RiskEvaluationResponse;
 
 @Service
 public class RiskEvaluationService {
 
     public RiskEvaluationResponse evaluate(RiskEvaluationRequest request) {
-        int seed = request.getDocument().hashCode();
-        Random random = new Random(seed);
+        Random random = new Random();
 
         int score = 300 + random.nextInt(651);
 
