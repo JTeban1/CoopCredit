@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.6">
+  <diagram name="Página-1" id="cPZxl-7m9HFKZJghvQi0">
+    <mxGraphModel dx="1374" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="11omOMPlXwjQbBFQ86x3-20" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="CoopCredit System" vertex="1">
+          <mxGeometry height="228" width="664" x="184" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-21" parent="1" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" value="Affiliate / User" vertex="1">
+          <mxGeometry height="114" width="114" x="20" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-22" parent="1" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;" value="System / Risk Service" vertex="1">
+          <mxGeometry height="171" width="171" x="1014" y="101" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-23" parent="1" style="rounded=1;arcSize=20;strokeWidth=2" value="Register Affiliate" vertex="1">
+          <mxGeometry height="54" width="146" x="246" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-24" parent="1" style="rounded=1;arcSize=20;strokeWidth=2" value="Register Credit Application" vertex="1">
+          <mxGeometry height="54" width="219" x="209" y="159" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-25" parent="1" style="rounded=1;arcSize=20;strokeWidth=2" value="Evaluate Credit Application" vertex="1">
+          <mxGeometry height="54" width="222" x="601" y="159" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-26" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-21" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.18;entryX=0;entryY=0.5;rounded=0;" target="11omOMPlXwjQbBFQ86x3-23" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="159" y="82" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-27" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-21" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.82;entryX=0;entryY=0.5;rounded=0;" target="11omOMPlXwjQbBFQ86x3-24" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="159" y="186" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-28" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-24" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" target="11omOMPlXwjQbBFQ86x3-25" value="Includes/Triggers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-29" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-25" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" target="11omOMPlXwjQbBFQ86x3-22" value="Consults History">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

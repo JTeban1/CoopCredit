@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.6">
+  <diagram name="Página-1" id="cPZxl-7m9HFKZJghvQi0">
+    <mxGraphModel dx="2008" dy="1223" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="11omOMPlXwjQbBFQ86x3-1" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Infrastructure Layer (Driven Adapters)" vertex="1">
+          <mxGeometry height="370" width="640" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-2" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Application Core" vertex="1">
+          <mxGeometry height="380" width="1070" x="680" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-3" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Outgoing Ports" vertex="1">
+          <mxGeometry height="128" width="330" x="700" y="247" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-4" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Domain Layer" vertex="1">
+          <mxGeometry height="330" width="330" x="1046" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-5" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Incoming Ports" vertex="1">
+          <mxGeometry height="128" width="330" x="1400" y="247" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-6" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Infrastructure Layer (Driving Adapters)" vertex="1">
+          <mxGeometry height="153" width="254" x="1770" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-7" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="REST Controllers" vertex="1">
+          <mxGeometry height="54" width="184" x="1805" y="119" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-8" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Input Ports (Use Cases interfaces)" vertex="1">
+          <mxGeometry height="78" width="260" x="1435" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-9" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Domain Model / Entities" vertex="1">
+          <mxGeometry height="54" width="229" x="1101" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-10" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Domain Services / Use Case Implementations" vertex="1">
+          <mxGeometry height="78" width="260" x="1085" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-11" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Output Ports (Repository/External interfaces)" vertex="1">
+          <mxGeometry height="78" width="260" x="735" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-12" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Persistence Adapters (JPA Repositories)" vertex="1">
+          <mxGeometry height="78" width="260" x="50" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-13" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="External Service Adapters (Risk Central)" vertex="1">
+          <mxGeometry height="78" width="260" x="365" y="57.5" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-14" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-7" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="11omOMPlXwjQbBFQ86x3-8" value="Uses">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1897" y="173" />
+              <mxPoint x="1565" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-15" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-10" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.71;exitY=1;entryX=0;entryY=0.09;rounded=0;" target="11omOMPlXwjQbBFQ86x3-8" value="Implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1307" y="173" />
+              <mxPoint x="1307" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-16" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-10" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="11omOMPlXwjQbBFQ86x3-9" value="Uses">
+          <mxGeometry relative="1" x="0.2059" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-17" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-10" style="curved=1;startArrow=none;endArrow=block;exitX=0.29;exitY=1;entryX=1;entryY=0.09;rounded=0;" target="11omOMPlXwjQbBFQ86x3-11" value="Uses">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1123" y="173" />
+              <mxPoint x="1123" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-18" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-12" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.23;entryY=0;rounded=0;" target="11omOMPlXwjQbBFQ86x3-11" value="Implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="173" />
+              <mxPoint x="752" y="210" />
+              <mxPoint x="752" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-19" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-13" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="11omOMPlXwjQbBFQ86x3-11" value="Implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="173" />
+              <mxPoint x="865" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

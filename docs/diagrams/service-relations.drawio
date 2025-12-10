@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.6">
+  <diagram name="Página-1" id="cPZxl-7m9HFKZJghvQi0">
+    <mxGraphModel dx="1374" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="11omOMPlXwjQbBFQ86x3-30" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Infrastructure" vertex="1">
+          <mxGeometry height="133" width="245" x="427" y="479" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-31" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Backend Services" vertex="1">
+          <mxGeometry height="286" width="387" x="20" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-32" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Frontend" vertex="1">
+          <mxGeometry height="104" width="268" x="103" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-33" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Client / Browser" vertex="1">
+          <mxGeometry height="54" width="173" x="150" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-34" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="coopcredit-frontend" vertex="1">
+          <mxGeometry height="54" width="198" x="138" y="173" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-35" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="credit-application-service" vertex="1">
+          <mxGeometry height="54" width="237" x="118" y="351" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-36" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="risk-central-mock-service" vertex="1">
+          <mxGeometry height="54" width="238" x="55" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-37" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" value="PostgreSQL Database" vertex="1">
+          <mxGeometry height="83" width="175" x="462" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-38" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-33" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="11omOMPlXwjQbBFQ86x3-34" value="HTTP / User Interaction">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-39" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-34" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="11omOMPlXwjQbBFQ86x3-35" value="HTTP / REST API">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-40" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-35" style="curved=1;startArrow=none;endArrow=block;exitX=0.39;exitY=1;entryX=0.5;entryY=0.01;rounded=0;" target="11omOMPlXwjQbBFQ86x3-36" value="HTTP / REST API">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="174" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11omOMPlXwjQbBFQ86x3-41" edge="1" parent="1" source="11omOMPlXwjQbBFQ86x3-35" style="curved=1;startArrow=none;endArrow=block;exitX=0.61;exitY=1;entryX=0;entryY=0.22;rounded=0;" target="11omOMPlXwjQbBFQ86x3-37" value="JDBC / JPA">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="442" />
+              <mxPoint x="300" y="479" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
