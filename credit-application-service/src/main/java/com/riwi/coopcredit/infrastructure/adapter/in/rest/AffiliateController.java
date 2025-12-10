@@ -1,5 +1,18 @@
 package com.riwi.coopcredit.infrastructure.adapter.in.rest;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.riwi.coopcredit.application.dto.request.AffiliateRequest;
 import com.riwi.coopcredit.application.dto.response.AffiliateResponse;
 import com.riwi.coopcredit.application.mapper.AffiliateMapper;
@@ -8,12 +21,9 @@ import com.riwi.coopcredit.domain.port.in.RegisterAffiliateUseCase;
 import com.riwi.coopcredit.domain.port.out.AffiliateRepositoryPort;
 import com.riwi.coopcredit.infrastructure.exception.BusinessException;
 import com.riwi.coopcredit.infrastructure.exception.ErrorCode;
+
 import io.micrometer.core.annotation.Timed;
 import jakarta.validation.Valid;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/affiliates")
@@ -40,6 +50,17 @@ public class AffiliateController {
         Affiliate registered = registerAffiliateUseCase.register(affiliate);
         AffiliateResponse response = affiliateMapper.toResponse(registered);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @GetMapping
+    @PreAuthorize("hasAnyRole('ADMIN', 'ANALISTA')")
+    @Timed(value = "affiliate.getAll", description = "Time to get all affiliates")
+    public ResponseEntity<List<AffiliateResponse>> getAllAffiliates() {
+        List<Affiliate> affiliates = affiliateRepository.findAll();
+        List<AffiliateResponse> responses = affiliates.stream()
+            .map(affiliateMapper::toResponse)
+            .collect(Collectors.toList());
+        return ResponseEntity.ok(responses);
     }
 
     @GetMapping("/{id}")
