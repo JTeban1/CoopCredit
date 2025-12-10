@@ -1,5 +1,14 @@
 package com.riwi.coopcredit.domain.service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.riwi.coopcredit.domain.model.Affiliate;
 import com.riwi.coopcredit.domain.model.CreditApplication;
 import com.riwi.coopcredit.domain.port.in.RegisterCreditApplicationUseCase;
@@ -7,14 +16,6 @@ import com.riwi.coopcredit.domain.port.out.AffiliateRepositoryPort;
 import com.riwi.coopcredit.domain.port.out.CreditApplicationRepositoryPort;
 import com.riwi.coopcredit.infrastructure.exception.BusinessException;
 import com.riwi.coopcredit.infrastructure.exception.ErrorCode;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Period;
 
 @Service
 @Transactional
